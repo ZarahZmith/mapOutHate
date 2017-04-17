@@ -12,14 +12,24 @@ h1 {
   font-family: "Titillium Web", sans-serif;
   font-style: italic;
   padding: 1em;
-  margin: 0; }
+  margin: 0;
+  font-size: 16pt; }
 
 @media screen and (min-width: 35em) {
+  h1 {
+    font-size: 30pt; }
+
   .content {
     text-align: center;
-    padding: 1em 3em; } }
+    padding: 1em 3em;
+    font-size: 20pt; } }
 @media screen and (min-width: 70em) {
+  h1 {
+    font-size: 40pt;
+    margin-top: 1em; }
+
   .content {
-    padding: 2em 10em; } }
+    padding: 2em 6em;
+    font-size: 24pt; } }
 
 /*# sourceMappingURL=style.css.map */
