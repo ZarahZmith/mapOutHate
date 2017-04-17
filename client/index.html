@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app='discriminHATE'>
   <head>
     <meta charset="utf-8">
     <title>discriminHATE</title>
@@ -9,16 +9,10 @@
   </head>
   <body>
 
-    <header>
-      <h1>discriminHATE</h1>
-    </header>
+    <main ui-view></main>
 
-    <p class='content'>Have you ever felt as if something was off to you and at the same time you
-      don't feel like you have a voice or an outlet? Have you have ever felt singled
-      out, discrinmated against, or victimized? Was this based on gender, gender
-      identity, race, religion, disability, or any other social or physical factor?
-      Find your voice here. Tell your story in real time. Don't discriminHATE, help
-      us map hate out of the picture.</p>
-
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
+    <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='/js/discrimin-hate.module.js'></script>
   </body>
 </html>
