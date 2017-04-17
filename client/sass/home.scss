@@ -1,0 +1,31 @@
+html {
+  background-color: $themeBackgroundColor;
+  color: $themeFontColor;
+}
+
+h1 {
+  font-family: $themeFont;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.content {
+  font-family: $themeFont;
+  font-style: italic;
+  padding: 1em;
+  margin: 0;
+}
+
+@media screen and (min-width: 35em) {
+  .content {
+    text-align: center;
+    padding: 1em 3em;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .content {
+    padding: 2em 10em;
+  }
+}
