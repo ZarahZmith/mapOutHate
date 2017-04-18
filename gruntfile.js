@@ -23,6 +23,16 @@ module.exports = function(config) {
           }
         ]
       },
+      copyjs: {
+        files: [
+          {
+            cwd: 'client/js/',
+            src: '*.js',
+            dest: 'build/js/',
+            expand: true
+          }
+        ]
+      }
     },
 
     jshint: {
