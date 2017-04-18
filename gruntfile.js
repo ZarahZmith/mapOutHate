@@ -1,13 +1,34 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function(config) {
 
-  grunt.initConfig({
+  config.initConfig({
+
+    clean: ['build/'],
+
+    copy: {
+      copyhtml: {
+        files: [
+          {
+            cwd: 'client/',
+            src: '*.html',
+            dest: 'build/',
+            expand: true
+          },
+          {
+            cwd: 'client/templates/',
+            src: '*.template.html',
+            dest: 'build/templates/',
+            expand: true
+          }
+        ]
+      },
+    },
 
     jshint: {
       appjs: {
         options: {
-          jshintrc: 'jshintrc'
+          jshintrc: '.jshintrc'
         },
         files: {
           src: ['src/**/*.js']
@@ -15,12 +36,17 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['build/']
-
+    sass: {
+      all: {
+        files: {
+          'build/style.css':'client/sass/main.scss'
+        }
+      }
+    }
   });
 
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(config);
 
-  grunt.registerTask('build', ['jshint', 'clean']);
+  config.registerTask('build', ['jshint', 'clean', 'copy', 'sass']);
 
 };
