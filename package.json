@@ -1,0 +1,29 @@
+{
+  "name": "discrimin-hate",
+  "version": "1.0.0",
+  "description": "A site to report instances of discrimination and micro-agressions.",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "grunt karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZarahZmith/discriminHATE.git"
+  },
+  "author": "Sarah Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZarahZmith/discriminHATE/issues"
+  },
+  "homepage": "https://github.com/ZarahZmith/discriminHATE#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^3.2.0"
+  }
+}
