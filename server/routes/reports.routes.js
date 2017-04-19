@@ -12,7 +12,13 @@ const Report = require('../models/Report.model');
  */
 function addAReport(req, res, next) {
   if (!req.body.type || !req.body.description || !req.body.address || !req.body.city || !req.body.state || !req.body.state) {
-    let error = new Error('Please give required report information');
+    let error = new Error('Please give required report information.');
+    error.status = 400;
+    return next(error);
+  }
+
+  if (req.body.type === '' || req.body.description === '' || req.body.address === '' || req.body.city === '' || req.body.state === '' || req.body.zip === '') {
+    let error = new Error('Please give required report information.');
     error.status = 400;
     return next(error);
   }
@@ -40,6 +46,12 @@ function addAReport(req, res, next) {
 }
 reportsRouter.post('/', addAReport);
 
+/**
+ * Allows all reports to be recieved from the server
+ * @param  {Object}   res  Displays all incident reports
+ * @param  {Function} next Returns the specific error
+ * @return {void}
+ */
 function viewAllReports(req, res, next) {
   Report.find()
     .then(function findReportInfo(reportInfo){
