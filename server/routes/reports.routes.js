@@ -11,6 +11,12 @@ const Report = require('../models/Report.model');
  * @return {void}
  */
 function addAReport(req, res, next) {
+  if (!req.body.type || !req.body.description || !req.body.address || !req.body.city || !req.body.state || !req.body.state) {
+    let error = new Error('Please give required report information');
+    error.status = 400;
+    return next(error);
+  }
+
   let newReport = new Report({
     type: req.body.type,
     description: req.body.description,
@@ -20,6 +26,7 @@ function addAReport(req, res, next) {
     zip: req.body.zip
   });
   newReport.createTime = Date.now();
+  
   newReport.save()
     .then(function makeNewReport(content) {
       res.json(content);
