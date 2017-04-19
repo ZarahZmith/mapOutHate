@@ -3,6 +3,13 @@
 const reportsRouter = require('express').Router();
 const Report = require('../models/Report.model');
 
+/**
+ * Allows someone to report a new incident
+ * @param {Object}   req  Must have a body like: {type: String, description: String, address: String, city: String, state: String, zip: String}
+ * @param {Object}   res  Shows the specific report
+ * @param {Function} next Returns the specific error
+ * @return {void}
+ */
 function addAReport(req, res, next) {
   let newReport = new Report({
     type: req.body.type,
