@@ -41,7 +41,7 @@ module.exports = function(config) {
           jshintrc: '.jshintrc'
         },
         files: {
-          src: ['src/**/*.js']
+          src: ['client/js/**/*.js']
         }
       }
     },
