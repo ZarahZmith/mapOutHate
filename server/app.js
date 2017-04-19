@@ -9,6 +9,8 @@ let app = express();
 
 app.use(bodyParser.json());
 
+app.use('/report', require('./routes/reports.routes'));
+
 app.listen(3000, function serverIsWorking() {
   console.log('The server is running');
 });
