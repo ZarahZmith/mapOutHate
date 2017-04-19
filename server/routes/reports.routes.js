@@ -26,18 +26,32 @@ function addAReport(req, res, next) {
     zip: req.body.zip
   });
   newReport.createTime = Date.now();
-  
+
   newReport.save()
     .then(function makeNewReport(content) {
       res.json(content);
     })
     .catch(function errorHandler(err) {
       console.error(err);
-      let theError = new Error('Could not save the report to the datanase');
+      let theError = new Error('Could not save the report to the datanase.');
       theError.status = 500;
       return next(theError);
     });
 }
 reportsRouter.post('/', addAReport);
+
+function viewAllReports(req, res, next) {
+  Report.find()
+    .then(function findReportInfo(reportInfo){
+      res.json(reportInfo);
+    })
+    .catch(function errorHandler(err) {
+      console.error(err);
+      let theError = new Error('Could not get reports from the database.');
+      theError.status = 500;
+      return next(theError);
+    });
+}
+reportsRouter.get('/all', viewAllReports);
 
 module.exports = reportsRouter;
