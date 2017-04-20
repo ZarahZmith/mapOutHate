@@ -52,6 +52,16 @@ module.exports = function(config) {
           'build/style.css':'client/sass/main.scss'
         }
       }
+    },
+
+    watch: {
+      scripts: {
+        files: ['client/**/*.html', 'client/**/*.js', 'client/sass/**/*.scss'],
+        tasks: ['build'],
+        options: {
+          spawn: false
+        }
+      }
     }
   });
 
