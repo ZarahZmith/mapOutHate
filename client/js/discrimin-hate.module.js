@@ -13,6 +13,11 @@
         name: 'home',
         url: '/',
         templateUrl: '/templates/home.template.html'
+      })
+      .state({
+        name: 'report-incident',
+        url: '/report',
+        templateUrl: '/templates/report-incident.template.html'
       });
 
   }
