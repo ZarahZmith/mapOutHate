@@ -1,3 +1,17 @@
 .incident-form {
   font-family: $themeFont;
+
+  h2 {
+    text-align: center;
+  }
+
+  .discrimination-type {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .report-text {
+    display: flex;
+    flex-direction: column;
+  }
 }
