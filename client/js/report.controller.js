@@ -4,25 +4,25 @@
   angular.module('discriminHATE')
     .controller('ReportController', ReportController);
 
-  ReportController.$inject = ['$state', 'ReportService'];
+  ReportController.$inject = ['ReportService'];
 
-  function ReportController($state, ReportService) {
+  function ReportController(ReportService) {
     let vm = this;
 
     vm.notification = null;
+    vm.content = {};
 
     console.log('Report controller');
 
     vm.addReport = function addReport(content) {
       console.log('add a report function', content);
       ReportService.addReport(content)
-        .then(function addReportToPage(data) {
-          $state.go({id: data.id});
+        .then(function addReportToPage() {
           vm.notification = 'Your report has sucessfully gone through. Thank you for sharing your story.';
         })
         .catch(function handleErrors(err) {
-          console.warn(err);
-          //TODO create a more informative catch
+          console.warn(err, err.status);
+          vm.notification = 'Your report did NOT go through. Please try again.';
         });
     };
   }
