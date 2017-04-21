@@ -25,7 +25,7 @@
         }
       })
       .then(function handleResponse(response) {
-        return response.json;
+        return response.data;
       });
     }
     return {
