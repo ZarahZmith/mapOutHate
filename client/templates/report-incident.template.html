@@ -1,4 +1,4 @@
-<form class='incident-form' ng-submit='reportCtrl.addReport(reportCtrl.content)'>
+<form class='incident-form' name='incidentreport' ng-submit='incidentreport.$valid && reportCtrl.addReport(reportCtrl.content)'>
 
   <h2>Report the Incident</h2>
 
@@ -8,82 +8,88 @@
     Type of Discrimination or Micro-Agression:
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='racial' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='racial' ng-model='reportCtrl.content.type'>
       Racial
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='gender' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='gender' ng-model='reportCtrl.content.type'>
       Gender Related
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='sexual-orientation' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='sexual-orientation' ng-model='reportCtrl.content.type'>
       Related to Sexual Orientation
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='transgender' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='transgender' ng-model='reportCtrl.content.type'>
       Related to Gender Identification (Transgender)
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='disability' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='disability' ng-model='reportCtrl.content.type'>
       Related to a Disability (Physical or Intellectual)
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='religion' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='religion' ng-model='reportCtrl.content.type'>
       Related to Religion
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='age' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='age' ng-model='reportCtrl.content.type'>
       Related to type
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='pregnancy' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='pregnancy' ng-model='reportCtrl.content.type'>
       Related to Pregnancy
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='other' ng-model='reportCtrl.content.type'>
+      <input required type='radio' name='typeofdiscrimination' value='other' ng-model='reportCtrl.content.type'>
       Other
     </label>
   </aside>
+  <p ng-show='!incidentreport.typeofdiscrimination.$valid && incidentreport.typeofdiscrimination.$touched'>Please select a type  of discrimination or micro-agression.</p>
 
   <aside class='report-text'>
-    <label for='report-content'>Describe the Incident:</label>
-    <textarea name='report-content' id='reportcontent' ng-model='reportCtrl.content.description'></textarea>
+    <label for='content'>Describe the Incident:</label>
+    <textarea name='content' id='reportcontent' ng-model='reportCtrl.content.description' required></textarea>
   </aside>
+  <p ng-show='!incidentreport.content.$valid && incidentreport.content.$touched'>Please describe the incident.</p>
 
   <fieldset>
     <legend>Location of Incident</legend>
 
     <aside>
-      <label for='address-input'>Address</label>
-      <input type='text' name='address-input' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
+      <label for='address'>Address</label>
+      <input required type='text' name='address' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
     </aside>
+    <p ng-show='!incidentreport.address.$valid && incidentreport.address.$touched'>Please insert a valid address.</p>
 
     <aside>
-      <label for='city-input'>City</label>
-      <input type='text' name='city-input' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
+      <label for='city'>City</label>
+      <input required type='text' name='city' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
     </aside>
+    <p ng-show='!incidentreport.city.$valid && incidentreport.city.$touched'>Please insert a valid city.</p>
 
     <aside>
-      <label for='state-input'>State</label>
-      <input type='text' name='state-input' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
+      <label for='state'>State</label>
+      <input required type='text' name='state' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
     </aside>
+    <p ng-show='!incidentreport.state.$valid && incidentreport.state.$touched'>Please insert a valid state.</p>
 
     <aside>
-      <label for='zipcode-input'>Zip Code</label>
-      <input type='text' name='zipcode-input' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
+      <label for='zipcode'>Zip Code</label>
+      <input required type='text' name='zipcode' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
     </aside>
+    <p ng-show='!incidentreport.zipcode.$valid && incidentreport.zipcode.$touched'>Please insert a valid zip code.</p>
   </fieldset>
 
   <aside class='button'>
-    <input type='submit' value='Submit My Report'>
+    <input required type='submit' value='Submit My Report'>
   </aside>
 
 </form>
