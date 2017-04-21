@@ -16,7 +16,12 @@
           'Content-Type': 'application/json'
         },
         data: {
-          content: content
+          type: content.type,
+          description: content.description,
+          address: content.address,
+          city: content.city,
+          state: content.state,
+          zip: content.zip
         }
       })
       .then(function handleResponse(response) {
