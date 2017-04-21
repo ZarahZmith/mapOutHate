@@ -17,7 +17,9 @@
       .state({
         name: 'report-incident',
         url: '/report',
-        templateUrl: '/templates/report-incident.template.html'
+        templateUrl: '/templates/report-incident.template.html',
+        controller: 'ReportController',
+        controllerAs: 'reportCtrl'
       });
 
   }
