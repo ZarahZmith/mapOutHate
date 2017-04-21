@@ -7,6 +7,8 @@ require('./database-setup');
 
 let app = express();
 
+app.use(express.static(__dirname + '/../build/'));
+
 app.use(bodyParser.json());
 
 app.use('/report', require('./routes/reports.routes'));
