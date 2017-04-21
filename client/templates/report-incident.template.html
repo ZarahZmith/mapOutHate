@@ -1,59 +1,61 @@
-<form class='incident-form'>
+<form class='incident-form' ng-submit='reportCtrl.addReport(reportCtrl.content)'>
 
   <h2>Report the Incident</h2>
+
+  <p ng-show='reportCtrl.notification'>{{reportCtrl.notification}}</p>
 
   <aside class='discrimination-type'>
     Type of Discrimination or Micro-Agression:
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='racial'>
+      <input type='radio' name='type-of-discrimination' value='racial' ng-model='reportCtrl.content.type'>
       Racial
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='gender'>
+      <input type='radio' name='type-of-discrimination' value='gender' ng-model='reportCtrl.content.type'>
       Gender Related
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='sexual-orientation'>
+      <input type='radio' name='type-of-discrimination' value='sexual-orientation' ng-model='reportCtrl.content.type'>
       Related to Sexual Orientation
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='transgender'>
+      <input type='radio' name='type-of-discrimination' value='transgender' ng-model='reportCtrl.content.type'>
       Related to Gender Identification (Transgender)
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='disability'>
+      <input type='radio' name='type-of-discrimination' value='disability' ng-model='reportCtrl.content.type'>
       Related to a Disability (Physical or Intellectual)
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='religion'>
+      <input type='radio' name='type-of-discrimination' value='religion' ng-model='reportCtrl.content.type'>
       Related to Religion
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='age'>
-      Related to Age
+      <input type='radio' name='type-of-discrimination' value='age' ng-model='reportCtrl.content.type'>
+      Related to type
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='pregnancy'>
+      <input type='radio' name='type-of-discrimination' value='pregnancy' ng-model='reportCtrl.content.type'>
       Related to Pregnancy
     </label>
 
     <label>
-      <input type='radio' name='type-of-discrimination' value='other'>
+      <input type='radio' name='type-of-discrimination' value='other' ng-model='reportCtrl.content.type'>
       Other
     </label>
   </aside>
 
   <aside class='report-text'>
     <label for='report-content'>Describe the Incident:</label>
-    <textarea name='report-content' id='reportcontent'></textarea>
+    <textarea name='report-content' id='reportcontent' ng-model='reportCtrl.content.description'></textarea>
   </aside>
 
   <fieldset>
@@ -61,22 +63,22 @@
 
     <aside>
       <label for='address-input'>Address</label>
-      <input type='text' name='address-input' id='address' placeholder='1600 Pennsylvania Ave NW'>
+      <input type='text' name='address-input' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
     </aside>
 
     <aside>
       <label for='city-input'>City</label>
-      <input type='text' name='city-input' id='city' placeholder='Washington'>
+      <input type='text' name='city-input' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
     </aside>
 
     <aside>
       <label for='state-input'>State</label>
-      <input type='text' name='state-input' id='state' placeholder='DC'>
+      <input type='text' name='state-input' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
     </aside>
 
     <aside>
       <label for='zipcode-input'>Zip Code</label>
-      <input type='text' name='zipcode-input' id='zipcode' placeholder='20500'>
+      <input type='text' name='zipcode-input' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
     </aside>
   </fieldset>
 
