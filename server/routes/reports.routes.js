@@ -13,13 +13,13 @@ const Report = require('../models/Report.model');
 function addAReport(req, res, next) {
   if (!req.body.type || !req.body.description || !req.body.address || !req.body.city || !req.body.state || !req.body.state) {
     let error = new Error('Please give required report information.');
-    error.status = 400;
+    error.status = 422;
     return next(error);
   }
 
   if (req.body.type === '' || req.body.description === '' || req.body.address === '' || req.body.city === '' || req.body.state === '' || req.body.zip === '') {
     let error = new Error('Please give required report information.');
-    error.status = 400;
+    error.status = 422;
     return next(error);
   }
 
