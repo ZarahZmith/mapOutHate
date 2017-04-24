@@ -90,5 +90,5 @@
     // Custom Globals
     "globals"       : {},        // additional predefined global variables
 
-    "predef"        : ["angular"]
+    "predef"        : ["chai", "angular"]
 }
