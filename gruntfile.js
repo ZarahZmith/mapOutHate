@@ -75,7 +75,14 @@ module.exports = function(config) {
             'client/js/**/*.js',
             'tests/**/*.spec.js'
           ],
-          singleRun: true
+          singleRun: true,
+          preprocessors: {
+            'client/js/**/*.js':['coverage']
+          },
+          reporters: ['dots', 'coverage'],
+          coverageReporter: {
+            type: 'text-summary'
+          }
         }
       }
     }
