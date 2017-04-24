@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ZarahZmith/discriminHATE#readme",
   "devDependencies": {
+    "angular-mocks": "^1.6.4",
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
