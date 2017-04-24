@@ -43,6 +43,12 @@
         returnValue
           .then(function(data) {
             expect(data).to.be.an('object');
+            expect(data.type).to.be.a('string');
+            expect(data.description).to.be.a('string');
+            expect(data.address).to.be.a('string');
+            expect(data.city).to.be.a('string');
+            expect(data.state).to.be.a('string');
+            expect(data.zip).to.be.a('string');
           });
       });
 
