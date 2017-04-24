@@ -50,6 +50,8 @@
             expect(data.state).to.be.a('string');
             expect(data.zip).to.be.a('string');
           });
+
+        $httpBackend.flush();
       });
 
     });
