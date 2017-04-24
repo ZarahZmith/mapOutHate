@@ -28,6 +28,7 @@
         return response.data;
       });
     }
+
     return {
       addReport: addReport
     };
