@@ -35,6 +35,7 @@
       expect(ReportController).to.be.an('object');
       expect(ReportController.notification).to.equal(null);
       expect(ReportController.content).to.be.an('object');
+      expect(ReportController.addReport).to.be.a('function');
     });
   });
 
