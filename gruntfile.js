@@ -62,11 +62,27 @@ module.exports = function(config) {
           spawn: false
         }
       }
+    },
+
+    karma: {
+      all: {
+        options: {
+          frameworks: ['chai', 'mocha'],
+          browsers: ['Chrome'],
+          files: [
+            'node_modules/angular/angular.js',
+            'client/js/discrimin-hate.module.js',
+            'client/js/**/*.js',
+            'tests/**/*.spec.js'
+          ],
+          singleRun: true
+        }
+      }
     }
   });
 
   require('load-grunt-tasks')(config);
 
-  config.registerTask('build', ['jshint', 'clean', 'copy', 'sass']);
+  config.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass']);
 
 };
