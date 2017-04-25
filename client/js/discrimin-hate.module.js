@@ -12,7 +12,9 @@
       .state({
         name: 'home',
         url: '/',
-        templateUrl: '/templates/home.template.html'
+        templateUrl: '/templates/home.template.html',
+        controller: 'LoginController',
+        controllerAs: 'loginCtrl'
       })
       .state({
         name: 'report-incident',
