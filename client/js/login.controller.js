@@ -23,7 +23,6 @@
           console.error('Unable to get token. User is not signed in.');
         }
       });
-
     };
 
   }
