@@ -11,10 +11,16 @@
 
     <main ui-view></main>
 
+    <section id='fb-root'></section>
+
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script  window.fbAsyncInit = function() { FB.init({ appId : '441187142880596', cookie : true, xfbml : true, version : 'v2.8'}); FB.AppEvents.logPageView();};
+    src='//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=441187142880596'></script>
     <script src='/js/discrimin-hate.module.js'></script>
     <script src='/js/report.controller.js'></script>
     <script src='/js/report.service.js'></script>
+    <script src='/js/login.controller.js'></script>
+
   </body>
 </html>
