@@ -8,7 +8,9 @@
 
   function LoginController($state) {
 
-    //used "window" here because facebook did not recognize "vm" (as it relates to the line "let vm = this;")
+    //let vm = this; //would have used 'vm' opposed to 'window' on 'window.getLoginStatus'
+
+    //used "window" here because facebook did not recognize 'vm'
     window.getLoginStatus = function getLoginStatus() {
       /**
        * Retreives a the log in status from Facebook
