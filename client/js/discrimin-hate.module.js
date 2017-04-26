@@ -34,15 +34,15 @@
 
   }
 
-  setupAuthCheck.$inject = ['$rootscope', '$state'];
+  setupAuthCheck.$inject = ['$rootScope', '$state'];
   /**
    * Checks whether user is logged in or not
-   * @param  {Object} $rootscope  Lives on the window and gives access to any '$scope'
+   * @param  {Object} $rootScope  Lives on the window and gives access to any '$scope'
    * @param  {Object} $state      Allows for a statechange
    * @return {void}
    */
-  function setupAuthCheck($rootscope, $state) {
-    $rootscope.$on('$stateChangeStart', function checkLoginStatus(eventObj, toState) {
+  function setupAuthCheck($rootScope, $state) {
+    $rootScope.$on('$stateChangeStart', function checkLoginStatus(eventObj, toState) {
       if ( toState.loginRequired && !localStorage.getItem('token') ) {
         eventObj.preventDefault();
         $state.go('home');
