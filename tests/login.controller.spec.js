@@ -32,7 +32,6 @@
       it('should do what it is supposed to do', function () {
         window.getLoginStatus();
         expect(window.FB.getLoginStatus.numTimesCalled).to.equal(1);
-        //TODO check local storage for the token
         expect(localStorage.getItem('token')).to.equal('sarah');
       });
 
