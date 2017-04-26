@@ -8,10 +8,20 @@
     <link href='style.css' rel='stylesheet'>
   </head>
   <body>
+    <header>
+      <h1>discriminHATE</h1>
+    </header>
 
     <main ui-view></main>
 
     <section id='fb-root'></section>
+
+    <fb:login-button
+      scope='public_profile,email'
+      onlogin='getLoginStatus()'
+      autologoutlink='true'
+      size='xlarge'>
+    </fb:login-button>
 
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
