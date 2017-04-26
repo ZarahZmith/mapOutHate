@@ -25,7 +25,6 @@
 
 
       it('should be a function', function() {
-        console.info('window.getLoginStatus', window.getLoginStatus);
         expect(window.getLoginStatus).to.be.a('function');
       });
 
