@@ -89,7 +89,8 @@
 
     // Custom Globals
     "globals"       : {
-      "FB"          : true
+      "FB"          : true,
+      "google"      : true
     },        // additional predefined global variables
 
     "predef"        : ["chai", "angular"]
