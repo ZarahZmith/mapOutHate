@@ -14,8 +14,9 @@
 
       window.FB = {};
 
-      window.FB.getLoginStatus = function getLoginStatus() {
+      window.FB.getLoginStatus = function getLoginStatus(fn) {
         window.FB.getLoginStatus.numTimesCalled++;
+        fn({ status: 'connected', authResponse: { accessToken: 'sarah' } });
       };
       window.FB.getLoginStatus.numTimesCalled = 0;
     }));
@@ -32,6 +33,7 @@
         window.getLoginStatus();
         expect(window.FB.getLoginStatus.numTimesCalled).to.equal(1);
         //TODO check local storage for the token
+        expect(localStorage.getItem('token')).to.equal('sarah');
       });
 
     });
