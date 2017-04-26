@@ -30,6 +30,11 @@
         controller: 'ReportController',
         controllerAs: 'reportCtrl',
         loginRequired: true
+      })
+      .state({
+        name: 'view-reports',
+        url: '/report/all',
+        templateUrl: '/templates/view-reports.template.html'
       });
 
   }
