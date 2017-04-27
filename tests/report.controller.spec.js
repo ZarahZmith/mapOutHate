@@ -7,6 +7,7 @@
 
     let ReportController;
     let mockReportService = {};
+    let $stateParams = {};
 
     beforeEach(module('discriminHATE'));
 
@@ -15,7 +16,7 @@
     }));
 
     beforeEach(inject(function($controller) {
-      mockReportService.addReport = function addStudent() {
+      mockReportService.addReport = function addReport() {
         return {
           type: 'religious',
           description: 'excessively burdoned at an airport',
@@ -28,12 +29,14 @@
         };
       };
 
-      ReportController = $controller('ReportController');
+      $stateParams = {successMessage: null};
+
+      ReportController = $controller('ReportController', {$stateParams: $stateParams});
     }));
 
     it('should have all of the things we expect it to', function() {
       expect(ReportController).to.be.an('object');
-      expect(ReportController.notification).to.equal(null);
+      expect(ReportController.notification).to.equal($stateParams.successMessage);
       expect(ReportController.content).to.be.an('object');
       expect(ReportController.addReport).to.be.a('function');
     });
