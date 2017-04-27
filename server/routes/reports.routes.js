@@ -2,6 +2,8 @@
 
 const reportsRouter = require('express').Router();
 const Report = require('../models/Report.model');
+const NodeGeocoder = require('node-geocoder');
+let geocoder = NodeGeocoder();
 
 /**
  * Allows someone to report a new incident
@@ -33,9 +35,20 @@ function addAReport(req, res, next) {
   });
   newReport.createTime = Date.now();
 
-  newReport.save()
-    .then(function makeNewReport(content) {
-      res.json(content);
+  geocoder.geocode(newReport.address + ', ' + newReport.city + ', ' + newReport.state + ', ' + newReport.zip)
+    .then(function createLatAndLong(responseObj) {
+      newReport.latitude = responseObj[0].latitude;
+      newReport.longitude = responseObj[0].longitude;
+      newReport.save()
+        .then(function makeNewReport(content) {
+          res.json(content);
+        })
+        .catch(function errorHandler(err) {
+          console.error(err);
+          let theError = new Error('Could not geocode the address.');
+          theError.status = 422; //unable to process request due to semantic error
+          return next(theError);
+        });
     })
     .catch(function errorHandler(err) {
       console.error(err);
@@ -43,6 +56,7 @@ function addAReport(req, res, next) {
       theError.status = 500;
       return next(theError);
     });
+
 }
 reportsRouter.post('/', addAReport);
 
