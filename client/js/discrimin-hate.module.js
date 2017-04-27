@@ -34,7 +34,11 @@
       .state({
         name: 'view-reports',
         url: '/report/all',
-        templateUrl: '/templates/view-reports.template.html'
+        templateUrl: '/templates/view-reports.template.html',
+        controller: 'ReportController',
+        controllerAs: 'reportCtrl',
+        loginRequired: true,
+        params: {successMessage: null}
       });
 
   }
