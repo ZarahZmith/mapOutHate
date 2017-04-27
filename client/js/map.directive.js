@@ -4,7 +4,7 @@
   angular.module('discriminHATE')
     .directive('map', map);
 
-  function map() {
+  function map(dateFilter) {
 
     return {
       templateUrl: 'templates/map.template.html',
@@ -24,15 +24,21 @@
           console.log(reportObj, 'creating a marker for a report');
 
           let reportLocation = new google.maps.LatLng(reportObj.latitude, reportObj.longitude);
+
           let reportMarker =new google.maps.Marker({
             type: reportObj.type,
             map: reportMap,
             position: reportLocation
           });
+
           reportMarker.data = reportObj;
+
+          let date = dateFilter(reportMarker.data.createTime, 'MMM. dd, yyyy');
+
           let reportDetails = new google.maps.InfoWindow({
-            content: reportMarker.data.type
+            content: reportMarker.data.type + ', ' + reportMarker.data.description + ', ' + date
           });
+
           reportMarker.addListener('click', function markerClick() {
             reportDetails.open(map, reportMarker);
           });
