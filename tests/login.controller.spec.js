@@ -21,6 +21,10 @@
       window.FB.getLoginStatus.numTimesCalled = 0;
     }));
 
+    afterEach(function() {
+      localStorage.removeItem('token');
+    });
+
     describe('getLoginStatus', function() {
 
 
