@@ -33,7 +33,7 @@
      * Retreive all reports
      * @return {void}
      */
-    function getReports() {
+    vm.getReports = function getReports() {
       ReportService.viewAllReports()
         .then(function retreiveReports(content) {
           vm.reports = vm.reports.concat(content);
@@ -43,10 +43,10 @@
           console.warn(err);
           //TODO display error message to user
         });
-    }
+    };
 
     if ($state.current.name === 'view-reports') {
-      getReports();
+      vm.getReports();
     }
   }
 }());
