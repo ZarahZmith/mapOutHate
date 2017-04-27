@@ -29,8 +29,22 @@
       });
     }
 
+    function viewAllReports() {
+      return $http({
+        url: '/report/all',
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(function handleResponse(response) {
+        return response.data;
+      });
+    }
+
     return {
-      addReport: addReport
+      addReport: addReport,
+      viewAllReports: viewAllReports
     };
   }
 
