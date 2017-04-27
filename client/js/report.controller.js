@@ -4,18 +4,18 @@
   angular.module('discriminHATE')
     .controller('ReportController', ReportController);
 
-  ReportController.$inject = ['ReportService'];
+  ReportController.$inject = ['$state', '$stateParams', 'ReportService'];
 
-  function ReportController(ReportService) {
+  function ReportController($state, $stateParams, ReportService) {
     let vm = this;
 
-    vm.notification = null;
+    vm.notification = $stateParams.successMessage;
     vm.content = {};
 
     vm.addReport = function addReport(content) {
       ReportService.addReport(content)
         .then(function addReportToPage() {
-          vm.notification = 'Your report has sucessfully gone through. Thank you for sharing your story.';
+          $state.go('view-reports', {successMessage: 'Your report has sucessfully gone through. Thank you for sharing your story.'});
         })
         .catch(function handleErrors(err) {
           console.warn(err, err.status);
