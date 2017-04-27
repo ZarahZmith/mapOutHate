@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('discriminHATE')
+  angular.module('mapOutHate')
     .factory('ReportService', ReportService);
 
   ReportService.$inject = ['$http'];

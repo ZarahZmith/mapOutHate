@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('discriminHATE')
+  angular.module('mapOutHate')
     .directive('map', map);
 
   function map(dateFilter) {

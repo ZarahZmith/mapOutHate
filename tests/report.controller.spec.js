@@ -9,7 +9,7 @@
     let mockReportService = {};
     let $stateParams = {};
 
-    beforeEach(module('discriminHATE'));
+    beforeEach(module('mapOutHate'));
 
     beforeEach(module(function($provide) {
       $provide.value('ReportService', mockReportService);

@@ -1,5 +1,5 @@
 {
-  "name": "discrimin-hate",
+  "name": "map-out-hate",
   "version": "1.0.0",
   "description": "A site to report instances of discrimination and micro-agressions.",
   "main": "server/app.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZarahZmith/discriminHATE.git"
+    "url": "git+https://github.com/ZarahZmith/mapOutHate.git"
   },
   "author": "Sarah Smith",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZarahZmith/discriminHATE/issues"
+    "url": "https://github.com/ZarahZmith/mapOutHate/issues"
   },
-  "homepage": "https://github.com/ZarahZmith/discriminHATE#readme",
+  "homepage": "https://github.com/ZarahZmith/mapOutHate#readme",
   "devDependencies": {
     "angular-mocks": "^1.6.4",
     "chai": "^3.5.0",

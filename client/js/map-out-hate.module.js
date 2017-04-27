@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('discriminHATE', ['ui.router'])
+  angular.module('mapOutHate', ['ui.router'])
     .config(routerConfig)
     .run(setupAuthCheck);
 

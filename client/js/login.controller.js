@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('discriminHATE')
+  angular.module('mapOutHate')
     .controller('LoginController', LoginController);
 
   LoginController.$inject = [ '$state' ];

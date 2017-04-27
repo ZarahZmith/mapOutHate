@@ -8,7 +8,7 @@
     let ReportService;
     let $httpBackend;
 
-    beforeEach(module('discriminHATE'));
+    beforeEach(module('mapOutHate'));
 
     beforeEach(inject(function(_$httpBackend_, _ReportService_) {
       $httpBackend = _$httpBackend_;

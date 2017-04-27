@@ -7,7 +7,7 @@
 
     let LoginController;
 
-    beforeEach(module('discriminHATE'));
+    beforeEach(module('mapOutHate'));
 
     beforeEach(inject(function($controller) {
       LoginController = $controller('LoginController');
