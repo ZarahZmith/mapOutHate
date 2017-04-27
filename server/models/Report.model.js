@@ -6,7 +6,9 @@ let reportSchema = mongoose.Schema({
   address: String,
   city: String,
   state: String,
-  zip: String
+  zip: String,
+  latitude: String,
+  longitude: String
 });
 
 module.exports = mongoose.model('Report', reportSchema);
