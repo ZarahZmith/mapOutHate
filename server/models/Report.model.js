@@ -8,7 +8,8 @@ let reportSchema = mongoose.Schema({
   state: String,
   zip: String,
   latitude: String,
-  longitude: String
+  longitude: String,
+  createTime: Date
 });
 
 module.exports = mongoose.model('Report', reportSchema);
