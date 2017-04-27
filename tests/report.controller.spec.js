@@ -24,13 +24,30 @@
           city: 'Washington',
           state: 'D.C.',
           zip: '20008',
-          createTime: '2017-03-10T00:09:16.445Z',
-          id: '45tyhjwefhy57'
         };
       };
 
-      $stateParams = {successMessage: null};
+      mockReportService.viewAllReports = function viewAllReports() {
+        return [
+          {
+            type: 'religious',
+            description: 'excessively burdoned at an airport',
+            address: '1800 Address Street',
+            city: 'Washington',
+            state: 'D.C.',
+            zip: '20008',
+            createTime: new Date(),
+            id: '45tyhjwefhy57',
+            latitude: '38.9072',
+            longitude: '-77.0369'
+          }
+        ];
+      };
 
+      //TODO mock$state
+
+      $stateParams = {successMessage: null};
+      
       ReportController = $controller('ReportController', {$stateParams: $stateParams});
     }));
 
@@ -39,7 +56,11 @@
       expect(ReportController.notification).to.equal($stateParams.successMessage);
       expect(ReportController.content).to.be.an('object');
       expect(ReportController.addReport).to.be.a('function');
+      expect(ReportController.getReports).to.be.a('function');
     });
+
+    //TODO execute functions and ensure they do what they are supposed to
+
   });
 
 }());
