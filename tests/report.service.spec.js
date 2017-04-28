@@ -30,7 +30,7 @@
 
     describe('addReport', function() {
 
-      it('should add a report if appropriate information is given', function() {
+      it('should add a report if appropriate information is given', function(done) {
         let returnValue = ReportService.addReport({
           type: 'religious',
           description: 'testing testing 123',
@@ -49,6 +49,7 @@
             expect(data.city).to.be.a('string');
             expect(data.state).to.be.a('string');
             expect(data.zip).to.be.a('string');
+            done();
           });
 
         $httpBackend.flush();
