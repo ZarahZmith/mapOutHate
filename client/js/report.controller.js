@@ -25,8 +25,10 @@
           $state.go('view-reports', {successMessage: 'Your report has sucessfully gone through. Thank you for sharing your story.'});
         })
         .catch(function handleErrors(err) {
-          console.warn(err, err.status);
+          console.warn(err);
           vm.notification = 'Your report did NOT go through. Please try again.';
+          let addReportErr = new Error(err.message);
+          throw addReportErr;
         });
     };
 
