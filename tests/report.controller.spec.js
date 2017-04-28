@@ -72,6 +72,10 @@
           .then(function() {
             expect(mockState.go.numTimesCalled).to.equal(1);
             done();
+          })
+          .catch(function(err) {
+            expect(ReportController.notification).to.equal('Your report did NOT go through. Please try again.');
+            done(err);
           });
       });
 
