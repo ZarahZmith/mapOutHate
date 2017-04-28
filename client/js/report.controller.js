@@ -17,10 +17,10 @@
     /**
      * Add a new report
      * @param  {Object} content The data the report is made up of
-     * @return {void}
+     * @return {Promie}
      */
     vm.addReport = function addReport(content) {
-      ReportService.addReport(content)
+      return ReportService.addReport(content)
         .then(function addReportToPage() {
           $state.go('view-reports', {successMessage: 'Your report has sucessfully gone through. Thank you for sharing your story.'});
         })
