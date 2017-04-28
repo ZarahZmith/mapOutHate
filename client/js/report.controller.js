@@ -22,7 +22,8 @@
     vm.addReport = function addReport(content) {
       return ReportService.addReport(content)
         .then(function addReportToPage() {
-          $state.go('view-reports', {successMessage: 'Your report has sucessfully gone through. Thank you for sharing your story.'});
+          let message = 'Your report has sucessfully gone through. Thank you for sharing your story.';
+          $state.go('view-reports', {successMessage: message});
         })
         .catch(function handleErrors(err) {
           console.warn(err);
