@@ -15,13 +15,16 @@
   function routerConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('', '/');
 
+    $urlRouterProvider.otherwise('404');
+
     $stateProvider
       .state({
         name: 'home',
         url: '/',
         templateUrl: '/templates/home.template.html',
         controller: 'LoginController',
-        controllerAs: 'loginCtrl'
+        controllerAs: 'loginCtrl',
+        loginRequired: false
       })
       .state({
         name: 'report-incident',
@@ -39,6 +42,12 @@
         controllerAs: 'reportCtrl',
         loginRequired: true,
         params: {successMessage: null}
+      })
+      .state({
+        name: 'not-found',
+        url: '/404',
+        templateUrl: '/templates/not-found.template.html',
+        loginRequired: false
       });
 
   }
