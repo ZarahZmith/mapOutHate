@@ -8,6 +8,11 @@
 
   function ReportService($http) {
 
+    /**
+     * Add a report to the database
+     * @param {Object} content The data required in a report
+     * @return {Promise}
+     */
     function addReport(content) {
       return $http({
         url: '/report',
