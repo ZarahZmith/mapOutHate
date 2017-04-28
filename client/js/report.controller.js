@@ -12,6 +12,7 @@
     vm.notification = $stateParams.successMessage;
     vm.content = {};
     vm.reports = [];
+    vm.error = null;
 
     /**
      * Add a new report
@@ -40,8 +41,8 @@
           console.log(vm.reports);
         })
         .catch(function handleErrors(err) {
-          console.warn(err);
-          //TODO display error message to user
+          console.warn(err, err.status);
+          vm.error = 'There was an issue loading the pins.';
         });
     };
 
