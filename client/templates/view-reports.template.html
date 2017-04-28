@@ -1,3 +1,5 @@
 <p ng-show='reportCtrl.notification'>{{reportCtrl.notification}}</p>
 
+<p ng-hide='reportCtrl.error'>Below are other reports in your area. You can click on an individual pin to view the details.</p>
+<p ng-show='reportCtrl.error'>{{reportCtrl.error}}</p>
 <map reports='reportCtrl.reports'><map>
