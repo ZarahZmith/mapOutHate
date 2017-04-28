@@ -18,15 +18,20 @@
     }));
 
     beforeEach(inject(function($controller) {
-      mockReportService.addReport = function addReport() {
-        return Promise.resolve({
-          type: 'religious',
-          description: 'excessively burdoned at an airport',
-          address: '1800 Address Street',
-          city: 'Washington',
-          state: 'D.C.',
-          zip: '20008',
-        });
+      mockReportService.addReport = function addReport(content) {
+
+        if (typeof(content) === 'object') {
+          return Promise.resolve({
+            type: 'religious',
+            description: 'excessively burdoned at an airport',
+            address: '1800 Address Street',
+            city: 'Washington',
+            state: 'D.C.',
+            zip: '20008',
+          });
+        } else {
+          return Promise.reject('The promise was rejected.');
+        }
       };
 
       mockReportService.viewAllReports = function viewAllReports() {
@@ -68,19 +73,28 @@
 
       it('should act the way it is intended to', function(done) {
         expect(ReportController.addReport).to.be.a('function');
-        ReportController.addReport()
+        ReportController.addReport({})
           .then(function() {
             expect(mockState.go.numTimesCalled).to.equal(1);
             done();
           })
           .catch(function(err) {
-            expect(ReportController.notification).to.equal('Your report did NOT go through. Please try again.');
             done(err);
           });
       });
 
+      it('should act the way it is intended when it enters the catch', function(done) {
+        ReportController.addReport()
+          .then(function() {
+            done('should not resolve with bad data');
+          })
+          .catch(function() {
+            expect(ReportController.notification).to.equal('Your report did NOT go through. Please try again.');
+            done();
+          });
+      });
+
     });
-    //TODO execute functions and ensure they do what they are supposed to
 
   });
 
