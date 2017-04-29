@@ -14,17 +14,17 @@
      * @return {String}      Future step options
      */
     function takeFurtherAction(type) {
-      if (typeof(content) === racial) {
+      if (type === 'racial') {
         return 'To take further action contact the Anit-Defamation League (https://www.adl.org/take-action/report-an-incident) or the American Civil Liberties Union (https://www.aclu.org/about/affiliates).';
-      } else if (typeof(content) === religion) {
+      } else if (type === 'religion') {
         return 'To take further action contact the Anit-Defamation League (https://www.adl.org/take-action/report-an-incident).';
-      } else if (typeof(content) === sexual-orientation || typeof(content) === transgender) {
+      } else if (type === 'sexual-orientation' || type === 'transgender') {
         return 'To take further action report to the American Civil Liberties Union (https://action.aclu.org/secure/report-lgbthiv-discrimination).';
-      } else if (typeof(content) === gender) {
-        return 'To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission (https://www.eeoc.gov/laws/types/sex.cfm).'
-      } else if (typeof(content) === disability) {
+      } else if (type === 'gender') {
+        return 'To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission (https://www.eeoc.gov/laws/types/sex.cfm).';
+      } else if (type === 'disability') {
         return 'To take further action file a complaint with the Department of Justice (https://www.justice.gov/crt/how-file-complaint).';
-      } else if (typeof(content) === preganancy) {
+      } else if (type === 'preganancy') {
         return 'To take further action know your rights as presented via the U.S. Equal Employment Opprotunity Commission (https://www.eeoc.gov/laws/guidance/pregnancy_guidance.cfm).';
       }
     }
