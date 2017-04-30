@@ -44,9 +44,9 @@
         params: {successMessage: null}
       })
       .state({
-        name: 'definitions',
-        url: '/definitions',
-        templateUrl: '/templates/definitions.template.html',
+        name: 'more-information',
+        url: '/info',
+        templateUrl: '/templates/more-info.template.html',
         loginRequired: false
       })
       .state({
