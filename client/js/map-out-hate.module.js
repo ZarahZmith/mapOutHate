@@ -44,6 +44,12 @@
         params: {successMessage: null}
       })
       .state({
+        name: 'more-information',
+        url: '/info',
+        templateUrl: '/templates/more-info.template.html',
+        loginRequired: false
+      })
+      .state({
         name: 'not-found',
         url: '/404',
         templateUrl: '/templates/not-found.template.html',
