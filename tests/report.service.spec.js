@@ -59,8 +59,12 @@
 
     describe('takeFurtherAction', function() {
 
-      it('should do what it is expected to', function() {
-        expect(ReportService.takeFurtherAction).to.be.a('function');
+      xit('should do what it is expected to', function(done) {
+        expect(ReportService.takeFurtherAction).to.be.an('function');
+        if (ReportService.type === 'racial') {
+          expect.it.to.return('To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.');
+          done();
+        }
       });
 
     });
