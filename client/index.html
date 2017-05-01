@@ -23,6 +23,33 @@
       size='xlarge'>
     </fb:login-button>
 
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a ui-sref='home'>
+              Home
+            </a>
+          </li>
+          <li>
+            <a ui-sref='report-incident'>
+              Report An Incident
+            </a>
+          </li>
+          <li>
+            <a ui-sref='view-reports'>
+              View All Reports
+            </a>
+          </li>
+          <li>
+            <a ui-sref='more-information'>
+              More Information
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
     <script  window.fbAsyncInit = function() { FB.init({ appId : '441187142880596', cookie : true, xfbml : true, version : 'v2.8'}); FB.AppEvents.logPageView();};
