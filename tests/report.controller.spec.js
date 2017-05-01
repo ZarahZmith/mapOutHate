@@ -51,6 +51,10 @@
         ];
       };
 
+      mockReportService.takeFurtherAction = function takeFurtherAction() {
+        return 'Success.';
+      };
+
       mockState.current = {name: null};
       mockState.go = function go() {
         mockState.go.numTimesCalled++;
