@@ -59,12 +59,25 @@
 
     describe('takeFurtherAction', function() {
 
-      xit('should do what it is expected to', function(done) {
+      it('should be a function', function() {
         expect(ReportService.takeFurtherAction).to.be.an('function');
-        if (ReportService.type === 'racial') {
-          expect.it.to.return('To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.');
-          done();
-        }
+      });
+
+      it('should do what it is expected to', function() {
+        let result = ReportService.takeFurtherAction('racial');
+        expect(result).to.equal('To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.');
+        result = ReportService.takeFurtherAction('religion');
+        expect(result).to.equal('To take further action contact the Anit-Defamation League on the "More Information" page.');
+        result = ReportService.takeFurtherAction('sexual-orientation' || 'transgender');
+        expect(result).to.equal('To take further action report to the American Civil Liberties Union on the "More Information" page.');
+        result = ReportService.takeFurtherAction('gender');
+        expect(result).to.equal('To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission on the "More Information" page.');
+        result = ReportService.takeFurtherAction('disability');
+        expect(result).to.equal('To take further action file a complaint with the Department of Justice through the "More Information" page.');
+        result = ReportService.takeFurtherAction('pregnancy');
+        expect(result).to.equal('To take further action review your rights on the U.S. Equal Employment Opprotunity Commission website linked on the "More Information" page.');
+        result = ReportService.takeFurtherAction('other');
+        expect(result).to.equal('To take further action please refer to the "More Information" page.');
       });
 
     });
