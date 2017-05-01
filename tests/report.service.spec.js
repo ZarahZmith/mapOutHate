@@ -57,5 +57,13 @@
 
     });
 
+    describe('takeFurtherAction', function() {
+
+      it('should do what it is expected to', function() {
+        expect(ReportService.takeFurtherAction).to.be.a('function');
+      });
+
+    });
+
   });
 }());
