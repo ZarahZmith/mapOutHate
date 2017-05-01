@@ -14,18 +14,21 @@
      * @return {String}      Future step options
      */
     function takeFurtherAction(type) {
+      console.log('type for further action', type);
       if (type === 'racial') {
-        return 'To take further action contact the Anit-Defamation League (https://www.adl.org/take-action/report-an-incident) or the American Civil Liberties Union (https://www.aclu.org/about/affiliates).';
+        return 'To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.';
       } else if (type === 'religion') {
-        return 'To take further action contact the Anit-Defamation League (https://www.adl.org/take-action/report-an-incident).';
+        return 'To take further action contact the Anit-Defamation League on the "More Information" page.';
       } else if (type === 'sexual-orientation' || type === 'transgender') {
-        return 'To take further action report to the American Civil Liberties Union (https://action.aclu.org/secure/report-lgbthiv-discrimination).';
+        return 'To take further action report to the American Civil Liberties Union on the "More Information" page.';
       } else if (type === 'gender') {
-        return 'To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission (https://www.eeoc.gov/laws/types/sex.cfm).';
+        return 'To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission on the "More Information" page.';
       } else if (type === 'disability') {
-        return 'To take further action file a complaint with the Department of Justice (https://www.justice.gov/crt/how-file-complaint).';
+        return 'To take further action file a complaint with the Department of Justice through the "More Information" page.';
       } else if (type === 'preganancy') {
-        return 'To take further action know your rights as presented via the U.S. Equal Employment Opprotunity Commission (https://www.eeoc.gov/laws/guidance/pregnancy_guidance.cfm).';
+        return 'To take further action review your rights on the U.S. Equal Employment Opprotunity Commission website linked on the "More Information" page.';
+      } else {
+        return 'To take further action please refer to the "More Information" page.';
       }
     }
 
