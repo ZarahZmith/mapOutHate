@@ -24,7 +24,7 @@
         return 'To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission on the "More Information" page.';
       } else if (type === 'disability') {
         return 'To take further action file a complaint with the Department of Justice through the "More Information" page.';
-      } else if (type === 'preganancy') {
+      } else if (type === 'pregnancy') {
         return 'To take further action review your rights on the U.S. Equal Employment Opprotunity Commission website linked on the "More Information" page.';
       } else {
         return 'To take further action please refer to the "More Information" page.';
