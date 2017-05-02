@@ -32,6 +32,16 @@ module.exports = function(config) {
             expand: true
           }
         ]
+      },
+      copyimg: {
+        files: [
+          {
+            cwd: 'client/images/',
+            src: '*.jpeg',
+            dest: 'build/images/',
+            expand: true
+          }
+        ]
       }
     },
 
