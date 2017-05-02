@@ -65,6 +65,9 @@
             expect(data.state).to.be.a('string');
             expect(data.zip).to.be.a('string');
             done();
+          })
+          .catch(function(err) {
+            done(err);
           });
 
         $httpBackend.flush();
@@ -103,20 +106,29 @@
         expect(ReportService.viewAllReports).to.be.a('function');
       });
 
-      it('should do what it is expected to', function() {
-        let returnValue = ReportService.viewAllReports([{
+      it('should do what it is expected to', function(done) {
+        let returnValue = ReportService.viewAllReports([
+          {
           type: 'religious',
           description: 'testing testing 123',
           address: '1800 address Street',
           city: 'Washington',
           state: 'D.C.',
           zip: '30000',
-        }]);
+          }
+        ]);
 
         returnValue
           .then(function(data) {
             expect(data).to.be.a('array');
+            expect(data[0]).to.be.an('object');
+            done();
+          })
+          .catch(function(err) {
+            done(err);
           });
+
+        $httpBackend.flush();
       });
 
     });
