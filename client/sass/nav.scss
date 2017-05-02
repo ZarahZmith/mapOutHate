@@ -1,5 +1,20 @@
-footer {
-  li {
-    list-style-type: none;
+nav {
+  display: flex;
+
+  i {
+    font-size: 20pt;
+  }
+
+  ul {
+    flex-flow: row wrap;
+
+    li {
+      list-style-type: none;
+    }
+
+    @media screen and (min-width: 35em) {
+      font-size: 15pt;
+    }
+
   }
 }
