@@ -24,14 +24,14 @@
     </fb:login-button>
 
     <footer>
-      <nav>
+      <nav ng-controller='NavController as navCtrl'>
         <ul>
           <li>
             <a ui-sref='home'>
               Home
             </a>
           </li>
-          <li>
+          <li ng-show='navCtrl.isLoggedIn()'>
             <a ui-sref='report-incident'>
               Report An Incident
             </a>
@@ -60,6 +60,7 @@
     <script src='/js/report.service.js'></script>
     <script src='/js/login.controller.js'></script>
     <script src='/js/map.directive.js'></script>
+    <script src='/js/nav.controller.js'></script>
 
   </body>
 </html>
