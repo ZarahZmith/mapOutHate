@@ -9,9 +9,41 @@
     <link href='style.css' rel='stylesheet'>
   </head>
   <body>
+    <nav ng-controller='NavController as navCtrl'>
+      <i class='glyphicon glyphicon-menu-hamburger'
+         ng-click='navCtrl.showNav = !navCtrl.showNav'></i>
+      <ul ng-show='navCtrl.showNav'>
+        <li>
+          <a ui-sref='home'>
+            Home
+          </a>
+        </li>
+        <li ng-show='navCtrl.isLoggedIn()'>
+          <a ui-sref='report-incident'>
+            Report An Incident
+          </a>
+        </li>
+        <li>
+          <a ui-sref='view-reports'>
+            View All Reports
+          </a>
+        </li>
+        <li>
+          <a ui-sref='more-information'>
+            More Information
+          </a>
+        </li>
+        <li>
+          <a ui-sref='know-your-rights'>
+            Know Your Rights
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <section>
       <header>
-        <h1>map out HATE</h1>
+        <h1 class='main'>map out HATE</h1>
       </header>
 
       <main ui-view></main>
@@ -24,38 +56,9 @@
         scope='public_profile,email'
         onlogin='getLoginStatus()'
         autologoutlink='true'
-        size='xlarge'>
+        size='xlarge'
+        class='fb'>
       </fb:login-button>
-      
-      <nav ng-controller='NavController as navCtrl'>
-        <ul>
-          <li>
-            <a ui-sref='home'>
-              Home
-            </a>
-          </li>
-          <li ng-show='navCtrl.isLoggedIn()'>
-            <a ui-sref='report-incident'>
-              Report An Incident
-            </a>
-          </li>
-          <li>
-            <a ui-sref='view-reports'>
-              View All Reports
-            </a>
-          </li>
-          <li>
-            <a ui-sref='more-information'>
-              More Information
-            </a>
-          </li>
-          <li>
-            <a ui-sref='know-your-rights'>
-              Know Your Rights
-            </a>
-          </li>
-        </ul>
-      </nav>
     </footer>
 
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
