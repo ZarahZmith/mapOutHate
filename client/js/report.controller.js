@@ -17,7 +17,7 @@
     /**
      * Add a new report
      * @param  {Object} content The data the report is made up of
-     * @return {Promie}
+     * @return {Promise}
      */
     vm.addReport = function addReport(content) {
       return ReportService.addReport(content)
@@ -36,10 +36,10 @@
 
     /**
      * Retreive all reports
-     * @return {void}
+     * @return {Promise}
      */
     vm.getReports = function getReports() {
-      ReportService.viewAllReports()
+      return ReportService.viewAllReports()
         .then(function retreiveReports(content) {
           vm.reports = vm.reports.concat(content);
           console.log(vm.reports);
