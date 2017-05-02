@@ -43,7 +43,7 @@
             city: 'Washington',
             state: 'D.C.',
             zip: '20008',
-            createTime: new Date(),
+            createTime: 'date',
             id: '45tyhjwefhy57',
             latitude: '38.9072',
             longitude: '-77.0369'
@@ -110,6 +110,16 @@
         ReportController.getReports()
           .then(function() {
             expect(ReportController.reports).to.be.a('array');
+            expect(ReportController.reports[0].type).to.equal('religious');
+            expect(ReportController.reports[0].description).to.equal('excessively burdoned at an airport');
+            expect(ReportController.reports[0].address).to.equal('1800 Address Street');
+            expect(ReportController.reports[0].city).to.equal('Washington');
+            expect(ReportController.reports[0].state).to.equal('D.C.');
+            expect(ReportController.reports[0].zip).to.equal('20008');
+            expect(ReportController.reports[0].createTime).to.equal('date');
+            expect(ReportController.reports[0].id).to.equal('45tyhjwefhy57');
+            expect(ReportController.reports[0].latitude).to.equal('38.9072');
+            expect(ReportController.reports[0].longitude).to.equal('-77.0369');
             done();
           })
           .catch(function(err) {
