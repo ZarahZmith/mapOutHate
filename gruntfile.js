@@ -97,11 +97,23 @@ module.exports = function(config) {
         src: ['client/js/map-out-hate.module.js', 'client/js/**/*.js'],
         dest: 'build/js/app.js'
       }
+    },
+
+    babel: {
+      all: {
+        options: {
+          presets: ['es2015'],
+          sourceMap: true
+        },
+        files: {
+          'build/js/app.js':'build/js/app.js'
+        }
+      }
     }
   });
 
   require('load-grunt-tasks')(config);
 
-  config.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass', 'concat']);
+  config.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass', 'concat', 'babel']);
 
 };
