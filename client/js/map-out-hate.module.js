@@ -50,6 +50,12 @@
         loginRequired: false
       })
       .state({
+        name: 'know-your-rights',
+        url: '/rights',
+        templateUrl: '/templates/know-your-rights.template.html',
+        loginRequired: false
+      })
+      .state({
         name: 'not-found',
         url: '/404',
         templateUrl: '/templates/not-found.template.html',
