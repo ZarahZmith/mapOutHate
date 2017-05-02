@@ -110,6 +110,7 @@
         ReportController.getReports()
           .then(function() {
             expect(ReportController.reports).to.be.a('array');
+            expect(ReportController.reports[0]).to.be.an('object');
             expect(ReportController.reports[0].type).to.equal('religious');
             expect(ReportController.reports[0].description).to.equal('excessively burdoned at an airport');
             expect(ReportController.reports[0].address).to.equal('1800 Address Street');
