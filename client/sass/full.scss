@@ -1,7 +1,26 @@
 body {
-
   background-color: $themeBackgroundColor;
   color: $themeFontColor;
   margin: 0;
+
+  h1.main {
+    font-family: $themeFont;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 35em) {
+    h1.main {
+      font-size: 30pt;
+    }
+  }
+
+  @media screen and (min-width: 70em) {
+    h1.main {
+      font-size: 40pt;
+      margin-top: 1em;
+    }
+  }
 
 }
