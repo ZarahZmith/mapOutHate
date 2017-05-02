@@ -2,6 +2,23 @@
   text-align: center;
 }
 
-.def-header {
+.info {
+  margin: 0 1em;
+}
+
+.help {
   text-align: center;
+}
+
+.section {
+  display: flex;
+
+  .panel-info{
+    margin: 1em;
+  }
+
+  .panel-heading {
+    text-align: center;
+  }
+
 }
