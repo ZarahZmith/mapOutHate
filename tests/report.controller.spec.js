@@ -35,7 +35,7 @@
       };
 
       mockReportService.viewAllReports = function viewAllReports() {
-        return [
+        return Promise.resolve([
           {
             type: 'religious',
             description: 'excessively burdoned at an airport',
@@ -48,7 +48,7 @@
             latitude: '38.9072',
             longitude: '-77.0369'
           }
-        ];
+        ]);
       };
 
       mockReportService.takeFurtherAction = function takeFurtherAction() {
@@ -95,6 +95,25 @@
           .catch(function() {
             expect(ReportController.notification).to.equal('Your report did NOT go through. Please try again.');
             done();
+          });
+      });
+
+    });
+
+    describe('getReports', function() {
+
+      it('should be a function', function() {
+        expect(ReportController.getReports).to.be.a('function');
+      });
+
+      it('should do what it is expected to', function(done) {
+        ReportController.getReports()
+          .then(function() {
+            expect(ReportController.reports).to.be.a('array');
+            done();
+          })
+          .catch(function(err) {
+            done(err);
           });
       });
 
