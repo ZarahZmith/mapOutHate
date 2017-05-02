@@ -7,10 +7,12 @@
   function NavController() {
     let vm = this;
 
+    /**
+     * If the user is logged in
+     * @return {Boolean} Yes or no if the user has a token
+     */
     vm.isLoggedIn = function isLoggedIn() {
-      //TODO return whether or not there is a token saved
-      //may require logout fn in a service
-      //may require login fn in a service
+      return !!localStorage.getItem('token');
     };
   }
 }());
