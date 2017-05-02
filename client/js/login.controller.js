@@ -22,7 +22,8 @@
           $state.go('report-incident');
           localStorage.setItem('token', response.authResponse.accessToken);
         } else {
-          console.error('Unable to get token. User is not signed in.');
+          localStorage.removeItem('token');
+          console.warn('Unable to get token. User is not signed in.');
         }
       });
     };

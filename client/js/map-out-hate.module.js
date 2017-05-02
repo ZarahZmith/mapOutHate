@@ -40,7 +40,7 @@
         templateUrl: '/templates/view-reports.template.html',
         controller: 'ReportController',
         controllerAs: 'reportCtrl',
-        loginRequired: true,
+        loginRequired: false,
         params: {successMessage: null}
       })
       .state({
