@@ -57,6 +57,10 @@
       });
     }
 
+    /**
+     * Gets all the of the reports in the database
+     * @return {Promise}
+     */
     function viewAllReports() {
       return $http({
         url: '/report/all',
