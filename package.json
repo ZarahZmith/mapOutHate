@@ -4,7 +4,9 @@
   "description": "A site to report instances of discrimination and micro-agressions.",
   "main": "server/app.js",
   "scripts": {
-    "test": "grunt karma"
+    "test": "grunt karma",
+    "postinstall": "grunt build",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -18,16 +20,7 @@
   "homepage": "https://github.com/ZarahZmith/mapOutHate#readme",
   "devDependencies": {
     "angular-mocks": "^1.6.4",
-    "babel-preset-env": "^1.4.0",
-    "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
-    "grunt": "^1.0.1",
-    "grunt-babel": "^6.0.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-karma": "^2.0.0",
     "karma": "^1.6.0",
@@ -35,14 +28,24 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-mocha": "^1.3.0",
-    "load-grunt-tasks": "^3.5.2",
     "mocha": "^3.2.0"
   },
   "dependencies": {
     "angular": "^1.6.4",
     "angular-ui-router": "^0.4.2",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
     "mongoose": "^4.9.5",
     "node-geocoder": "^3.16.0"
   }
