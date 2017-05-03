@@ -14,7 +14,7 @@
      * @return {String}      Future step options
      */
     function takeFurtherAction(type) {
-      if (type === 'racial') {
+      if (type === 'race') {
         return 'To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.';
       } else if (type === 'religion') {
         return 'To take further action contact the Anit-Defamation League on the "More Information" page.';
