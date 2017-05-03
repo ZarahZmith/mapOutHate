@@ -36,7 +36,8 @@
           let date = dateFilter(reportMarker.data.createTime, 'MMM. dd, yyyy');
 
           let reportDetails = new google.maps.InfoWindow({
-            content: reportMarker.data.type + ', ' + reportMarker.data.description + ', ' + date
+            content: '<section class="data">' + '<h2>' + reportMarker.data.type + '</h2>' + '<p>' + 'Description: ' +
+            reportMarker.data.description + '</p>' + '<p>' + date + '</p' + '</section>'
           });
 
           reportMarker.addListener('click', function markerClick() {
