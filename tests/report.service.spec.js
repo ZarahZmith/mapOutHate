@@ -82,7 +82,7 @@
       });
 
       it('should do what it is expected to', function() {
-        let result = ReportService.takeFurtherAction('racial');
+        let result = ReportService.takeFurtherAction('race');
         expect(result).to.equal('To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.');
         result = ReportService.takeFurtherAction('religion');
         expect(result).to.equal('To take further action contact the Anit-Defamation League on the "More Information" page.');
