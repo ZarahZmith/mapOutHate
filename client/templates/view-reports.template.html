@@ -1,10 +1,10 @@
-<p ng-show='reportCtrl.notification'>
+<p ng-show='reportCtrl.notification' class='alert alert-info'>
   {{reportCtrl.notification}}
-  <a ui-sref='more-information'>
+  <a ui-sref='more-information' class='btn btn-primary'>
     More Information
   </a>
 </p>
 
-<p ng-hide='reportCtrl.error'>Below are other reports in your area. You can click on an individual pin to view the details.</p>
-<p ng-show='reportCtrl.error'>{{reportCtrl.error}}</p>
+<p ng-hide='reportCtrl.error' class='map-info'>Below are other reports in your area. You can click on an individual pin to view the details.</p>
+<p ng-show='reportCtrl.error' class='alert alert-warning'>{{reportCtrl.error}}</p>
 <map reports='reportCtrl.reports'><map>
