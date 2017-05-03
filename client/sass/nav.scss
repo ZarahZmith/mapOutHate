@@ -1,20 +1,39 @@
 nav {
   display: flex;
 
+
   i {
     font-size: 20pt;
   }
 
   ul {
+    display: flex;
     flex-flow: row wrap;
 
     li {
       list-style-type: none;
+      margin: .2em;
     }
 
-    @media screen and (min-width: 35em) {
+  }
+
+  @media screen and (min-width: 35em) {
+    ul {
       font-size: 15pt;
     }
 
+    i {
+      font-size: 28pt;
+    }
+  }
+
+  @media screen and (min-width: 70em) {
+    ul {
+      font-size: 20pt;
+    }
+
+    i {
+      font-size: 35pt;
+    }
   }
 }
