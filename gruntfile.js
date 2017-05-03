@@ -124,6 +124,6 @@ module.exports = function(config) {
 
   require('load-grunt-tasks')(config);
 
-  config.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass', 'concat', 'babel']);
+  config.registerTask('build', ['jshint', 'clean', 'copy', 'sass', 'concat', 'babel']);
 
 };
