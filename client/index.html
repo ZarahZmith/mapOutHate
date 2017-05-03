@@ -14,27 +14,27 @@
          ng-click='navCtrl.showNav = !navCtrl.showNav'></i>
       <ul ng-show='navCtrl.showNav'>
         <li>
-          <a ui-sref='home'>
+          <a ui-sref='home' class='btn btn-default'>
             Home
           </a>
         </li>
         <li ng-show='navCtrl.isLoggedIn()'>
-          <a ui-sref='report-incident'>
+          <a ui-sref='report-incident' class='btn btn-danger'>
             Report An Incident
           </a>
         </li>
         <li>
-          <a ui-sref='view-reports'>
+          <a ui-sref='view-reports' class='btn btn-primary'>
             View All Reports
           </a>
         </li>
         <li>
-          <a ui-sref='more-information'>
+          <a ui-sref='more-information' class='btn btn-default'>
             More Information
           </a>
         </li>
         <li>
-          <a ui-sref='know-your-rights'>
+          <a ui-sref='know-your-rights' class='btn btn-default'>
             Know Your Rights
           </a>
         </li>
