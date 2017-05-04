@@ -3,11 +3,19 @@
 }
 
 .info {
-  margin: 0 1em;
+  margin: .5em;
+  font-size: 13pt;
 }
 
-.help {
-  text-align: center;
+.about-all {
+  padding: 1em;
+  margin: 2em;
+  border: 1em solid $themeFontColor;
+}
+
+.bold {
+  color: #c22929;
+  font-style: italic;
 }
 
 .section {
@@ -21,4 +29,40 @@
     text-align: center;
   }
 
+  .def {
+    font-size: 13pt;
+    color: #000000;
+    padding: .5em;
+    text-align: center;
+    list-style: none;
+  }
+
+}
+
+.help {
+  text-align: center;
+}
+
+.help-list {
+  font-size: 13pt;
+}
+
+@media screen and (min-width: 35em) {
+  .about-all: {
+    margin: 5em;
+  }
+  .about {
+    font-size: 22pt;
+  }
+  .info {
+    font-size: 18pt;
+  }
+  .help-list {
+    font-size: 18pt;
+  }
+  .section {
+    li.def {
+      font-size: 18pt;
+    }
+  }
 }
