@@ -1,7 +1,8 @@
 .incident-form {
   font-family: $themeFont;
 
-  h2 {
+  .title {
+    color: #c22929;
     text-align: center;
   }
 
@@ -25,11 +26,22 @@
   .report-text {
     display: flex;
     flex-direction: column;
+    border: .2em solid #242323;
+    border-radius: 10px;
+    box-shadow: 1px 3px 1px #242323;
+    margin: 3em .3em;
+    label.content {
+      padding: .3em;
+      font-style: normal;
+    }
+    textarea#reportcontent {
+      height: 200px;
+      margin: .3em;
+      border-radius: 10px;
+    }
   }
 
-  textarea#reportcontent {
-    height: 100px;
-  }
+
 
   .button {
     text-align: center;
