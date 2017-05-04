@@ -1,19 +1,33 @@
 .map-info {
   text-align: center;
-  font-size: 14pt;
+  font-size: $mapTextSize;
+  padding: 1em;
 }
 
 .alert-info {
   margin: 1em;
   text-align: center;
+  font-size: $mapTextSize;
 }
 
 .alert-warning {
   text-align: center;
-  font-size: 14pt;
+  font-size: $mapTextSize;
   margin: 1em;
 }
 
 section.data {
   color: #000000;
+}
+
+@media screen and (min-width: 35em) {
+  .map-info {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .map-info {
+    font-size: 20pt;
+  }
 }
