@@ -74,6 +74,13 @@
   }
 
   @media screen and (min-width: 35em) {
+    .discrimination-type {
+      width: 60%;
+      margin: 0 auto;
+      .type {
+        font-size: 15pt;
+      }
+    }
 
     .report-text label {
       margin: 0 auto;
