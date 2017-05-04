@@ -1,16 +1,19 @@
-.about {
-  text-align: center;
-}
-
-.info {
-  margin: .5em;
-  font-size: 13pt;
-}
-
 .about-all {
-  padding: 1em;
+  padding: 3em;
   margin: 2em;
-  border: 1em solid $themeFontColor;
+  border: .5em solid $themeFontColor;
+  border-radius: 2%;
+
+  h3 {
+    text-align: center;
+    font-size: 30pt;
+    margin: 0;
+  }
+
+  p {
+    margin: .5em;
+    font-size: 18pt;
+  }
 }
 
 .bold {
@@ -18,11 +21,12 @@
   font-style: italic;
 }
 
-.section {
+.bootstrap {
   display: flex;
+  flex-direction: column;
 
   .panel-info{
-    margin: 1em;
+    margin: 2em;
   }
 
   .panel-heading {
@@ -30,7 +34,7 @@
   }
 
   .def {
-    font-size: 13pt;
+    font-size: 18pt;
     color: #000000;
     padding: .5em;
     text-align: center;
@@ -39,28 +43,35 @@
 
 }
 
+.resources {
+  padding: 3em;
+  margin: 2em;
+  border: .5em solid $themeFontColor;
+  border-radius: 2%;
+}
 .help {
   text-align: center;
+  font-size: 30pt;
 }
 
 .help-list {
-  font-size: 13pt;
+  font-size: 18pt;
 }
 
 @media screen and (min-width: 35em) {
   .about-all: {
     margin: 5em;
   }
-  .about {
-    font-size: 22pt;
+
+  h3.help {
+    margin: 0;
+    font-size: 30pt;
   }
-  .info {
-    font-size: 18pt;
-  }
+
   .help-list {
     font-size: 18pt;
   }
-  .section {
+  .bootstrap {
     li.def {
       font-size: 18pt;
     }
