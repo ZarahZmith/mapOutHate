@@ -1,6 +1,6 @@
 <form class='incident-form' name='incidentreport' ng-submit='incidentreport.$valid && reportCtrl.addReport(reportCtrl.content)'>
 
-  <h2>Report the Incident</h2>
+  <h2 class='title'>Report the Incident</h2>
 
   <p ng-show='reportCtrl.notification'>{{reportCtrl.notification}}</p>
 
@@ -55,8 +55,8 @@
   <p ng-show='!incidentreport.typeofdiscrimination.$valid && incidentreport.typeofdiscrimination.$touched'>Please select a type  of discrimination or micro-agression.</p>
 
   <aside class='report-text'>
-    <label for='content'>Describe the Incident:</label>
-    <textarea name='content' id='reportcontent' ng-model='reportCtrl.content.description' required></textarea>
+    <label class='content' for='content'>Describe the Incident:</label>
+    <textarea class='box' name='content' id='reportcontent' ng-model='reportCtrl.content.description' required></textarea>
   </aside>
   <p ng-show='!incidentreport.content.$valid && incidentreport.content.$touched'>Please describe the incident.</p>
 
