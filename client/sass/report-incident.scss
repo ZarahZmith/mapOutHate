@@ -4,6 +4,8 @@
   .title {
     color: #c22929;
     text-align: center;
+    border-top: .2em solid #242323;
+    padding: 1em 0 0 0;
   }
 
   .discrimination-type {
@@ -14,7 +16,7 @@
     margin: .3em;
     border-radius: 10px;
     box-shadow: 1px 3px 1px #242323;
-    font-size: 13pt;
+    font-size: 15pt;
     font-weight: bold;
     .type {
       font-size: 12pt;
@@ -33,6 +35,7 @@
     label.content {
       padding: .3em;
       font-style: normal;
+      font-size: 15pt;
     }
     textarea#reportcontent {
       height: 200px;
@@ -41,10 +44,32 @@
     }
   }
 
-
+  fieldset.location {
+    border: .2em solid #242323;
+    border-radius: 10px;
+    box-shadow: 1px 3px 1px #242323;
+    padding: .3em;
+    margin: 2em .3em;
+    .form-control {
+      padding: .3em;
+    }
+    h3 {
+      font-size: 15pt;
+      font-weight: bold;
+      margin: 0;
+      padding: .3em;
+    }
+    .location-det {
+      font-weight: normal;
+      font-size: 12pt;
+    }
+  }
 
   .button {
     text-align: center;
+    padding: 0 0 10em 0;
+    border-bottom: .2em solid #242323;
+    box-shadow: 1px 3px 1px #242323;
   }
 
   @media screen and (min-width: 35em) {
