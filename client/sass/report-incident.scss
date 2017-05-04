@@ -78,28 +78,41 @@
       font-size: 30pt;
       text-shadow: 1px 1px 2px #4a2727;
       font-weight: bold;
-      padding: 1em 0;
+      padding: 1em 0 .5em 0;
     }
 
     .discrimination-type {
       width: 60%;
-      margin: 0 auto;
+      margin: 1em auto;
       .type {
         font-size: 15pt;
       }
     }
 
-    .report-text label {
-      margin: 0 auto;
+    .report-text {
+      width: 60%;
+      margin: 3em auto;
+      label.content {
+        text-align: left;
+        padding: .5em 1em;
+        font-size: 15pt;
+      }
+      textarea#reportcontent {
+        width: 500px;
+        margin: 0 auto 1em auto;
+        font-size: 15pt;
+      }
     }
 
-    textarea#reportcontent {
-      width: 500px;
-      margin: 1em auto;
-    }
-
-    fieldset {
-      margin: 1em 5em;
+    fieldset.location {
+      width: 60%;
+      margin: 3em auto;
+      h3 {
+        padding: .5em 1em;
+      }
+      aside {
+        padding: .5em;
+      }
     }
   }
 
