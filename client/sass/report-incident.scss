@@ -146,8 +146,14 @@
     }
 
     .report-text {
+      label.content {
+        font-size: 25pt;
+        padding: 0 0 1em 0;
+      }
       textarea#reportcontent {
         width: 100%;
+        font-size: 20pt;
+        height: 250px;
       }
     }
 
