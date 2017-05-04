@@ -71,7 +71,6 @@
     text-align: center;
     padding: 0 0 10em 0;
     border-bottom: .2em solid #242323;
-    box-shadow: 1px 3px 1px #242323;
     .btn {
       width: 60%;
       margin: 0 auto;
@@ -87,7 +86,7 @@
     }
 
     .discrimination-type {
-      width: 60%;
+      width: 70%;
       margin: 1em auto;
       padding: 4em;
       .type {
@@ -96,7 +95,7 @@
     }
 
     .report-text {
-      width: 60%;
+      width: 70%;
       margin: 3em auto;
       padding: 3.5em;
       label.content {
@@ -105,14 +104,14 @@
         font-size: 15pt;
       }
       textarea#reportcontent {
-        width: 500px;
+        width: 100%;
         margin: 0 auto 1em auto;
         font-size: 15pt;
       }
     }
 
     fieldset.location {
-      width: 60%;
+      width: 70%;
       margin: 3em auto;
       padding: 4em;
       h3 {
@@ -136,6 +135,7 @@
       font-size: 40pt;
     }
     .discrimination-type {
+      width: 80%;
       font-size: 25pt;
       padding: 2.5em;
       text-align: center;
@@ -146,9 +146,10 @@
     }
 
     .report-text {
+      width: 80%;
       label.content {
         font-size: 25pt;
-        padding: 0 0 1em 0;
+        padding: 0 0 .3em 0;
       }
       textarea#reportcontent {
         width: 100%;
@@ -157,9 +158,25 @@
       }
     }
 
-    //
-    // fieldset {
-    //   margin: 1em 12em;
-    // }
+    fieldset.location {
+      width: 80%;
+      h3 {
+        font-size: 25pt;
+        padding: 0 0 .3em 0;
+      }
+      .location-det {
+        font-size: 25pt;
+      }
+      .form-control {
+        font-size: 25pt;
+      }
+    }
+
+    .button {
+      padding: 3em 0 10em 0;
+      .btn {
+        width: 80%;
+      }
+    }
   }
 }
