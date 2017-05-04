@@ -71,6 +71,10 @@
     padding: 0 0 10em 0;
     border-bottom: .2em solid #242323;
     box-shadow: 1px 3px 1px #242323;
+    .btn {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 
   @media screen and (min-width: 35em) {
@@ -113,6 +117,12 @@
       }
       aside {
         padding: .5em;
+      }
+      .location-det {
+        font-size: 15pt;
+      }
+      .form-control {
+        font-size: 15pt;
       }
     }
   }
