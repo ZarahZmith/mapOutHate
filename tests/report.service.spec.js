@@ -82,19 +82,19 @@
       });
 
       it('should do what it is expected to', function() {
-        let result = ReportService.takeFurtherAction('race');
+        let result = ReportService.takeFurtherAction('Race');
         expect(result).to.equal('To take further action contact the Anti-Defamation League or the American Civil Liberties Union on the "More Information" page.');
-        result = ReportService.takeFurtherAction('religion');
+        result = ReportService.takeFurtherAction('Religion');
         expect(result).to.equal('To take further action contact the Anit-Defamation League on the "More Information" page.');
-        result = ReportService.takeFurtherAction('sexual-orientation' || 'transgender');
+        result = ReportService.takeFurtherAction('Sexual-orientation' || 'Transgender');
         expect(result).to.equal('To take further action report to the American Civil Liberties Union on the "More Information" page.');
-        result = ReportService.takeFurtherAction('gender');
+        result = ReportService.takeFurtherAction('Gender');
         expect(result).to.equal('To take the next step know your rights as presented via the U.S. Equal Employment Opprotunity Commission on the "More Information" page.');
-        result = ReportService.takeFurtherAction('disability');
+        result = ReportService.takeFurtherAction('Disability');
         expect(result).to.equal('To take further action file a complaint with the Department of Justice through the "More Information" page.');
-        result = ReportService.takeFurtherAction('pregnancy');
+        result = ReportService.takeFurtherAction('Pregnancy');
         expect(result).to.equal('To take further action review your rights on the U.S. Equal Employment Opprotunity Commission website linked on the "More Information" page.');
-        result = ReportService.takeFurtherAction('other');
+        result = ReportService.takeFurtherAction('Other');
         expect(result).to.equal('To take further action please refer to the "More Information" page.');
       });
 
