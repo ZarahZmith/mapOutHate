@@ -74,6 +74,13 @@
   }
 
   @media screen and (min-width: 35em) {
+    .title {
+      font-size: 30pt;
+      text-shadow: 1px 1px 2px #4a2727;
+      font-weight: bold;
+      padding: 1em 0;
+    }
+
     .discrimination-type {
       width: 60%;
       margin: 0 auto;
