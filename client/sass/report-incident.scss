@@ -8,6 +8,18 @@
   .discrimination-type {
     display: flex;
     flex-direction: column;
+    border: .2em solid #242323;
+    padding: 1em;
+    margin: .3em;
+    border-radius: 10px;
+    box-shadow: 1px 3px 1px #242323;
+    font-size: 13pt;
+    font-weight: bold;
+    .type {
+      font-size: 12pt;
+      font-weight: normal;
+      padding: .3em;
+    }
   }
 
   .report-text {
@@ -24,9 +36,6 @@
   }
 
   @media screen and (min-width: 35em) {
-    .discrimination-type {
-      padding: 1em 5em;
-    }
 
     .report-text label {
       margin: 0 auto;
