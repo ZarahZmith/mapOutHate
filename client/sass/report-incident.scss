@@ -89,6 +89,7 @@
     .discrimination-type {
       width: 60%;
       margin: 1em auto;
+      padding: 4em;
       .type {
         font-size: 15pt;
       }
@@ -97,6 +98,7 @@
     .report-text {
       width: 60%;
       margin: 3em auto;
+      padding: 3.5em;
       label.content {
         text-align: left;
         padding: .5em 1em;
@@ -112,6 +114,7 @@
     fieldset.location {
       width: 60%;
       margin: 3em auto;
+      padding: 4em;
       h3 {
         padding: .5em .5em;
         font-size: 15pt;
@@ -129,16 +132,28 @@
   }
 
   @media screen and (min-width: 70em) {
+    .title {
+      font-size: 40pt;
+    }
     .discrimination-type {
-      padding: 2em 12em;
+      font-size: 25pt;
+      padding: 2.5em;
+      text-align: center;
+      .type {
+        font-size: 25pt;
+        text-align: left;
+      }
     }
 
-    textarea#reportcontent {
-      width: 700px;
+    .report-text {
+      textarea#reportcontent {
+        width: 100%;
+      }
     }
 
-    fieldset {
-      margin: 1em 12em;
-    }
+    //
+    // fieldset {
+    //   margin: 1em 12em;
+    // }
   }
 }
