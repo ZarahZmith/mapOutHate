@@ -57,23 +57,3 @@
 .help-list {
   font-size: 18pt;
 }
-
-@media screen and (min-width: 35em) {
-  .about-all: {
-    margin: 5em;
-  }
-
-  h3.help {
-    margin: 0;
-    font-size: 30pt;
-  }
-
-  .help-list {
-    font-size: 18pt;
-  }
-  .bootstrap {
-    li.def {
-      font-size: 18pt;
-    }
-  }
-}
