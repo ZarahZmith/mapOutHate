@@ -7,47 +7,47 @@
   <aside class='discrimination-type'>
     Type of Discrimination or Micro-Agression:
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Race' ng-model='reportCtrl.content.type'>
       Racial
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Gender' ng-model='reportCtrl.content.type'>
       Gender Related
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Sexual-orientation' ng-model='reportCtrl.content.type'>
       Related to Sexual Orientation
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Transgender' ng-model='reportCtrl.content.type'>
       Related to Gender Identification (Transgender)
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Disability' ng-model='reportCtrl.content.type'>
       Related to a Disability (Physical or Intellectual)
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Religion' ng-model='reportCtrl.content.type'>
       Related to Religion
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Age' ng-model='reportCtrl.content.type'>
       Related to Age
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Pregnancy' ng-model='reportCtrl.content.type'>
       Related to Pregnancy
     </label>
 
-    <label>
+    <label class='type'>
       <input required type='radio' name='typeofdiscrimination' value='Other' ng-model='reportCtrl.content.type'>
       Other
     </label>
@@ -65,25 +65,25 @@
 
     <aside>
       <label for='address'>Address</label>
-      <input required type='text' name='address' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
+      <input class='form-control' required type='text' name='address' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
     </aside>
     <p ng-show='!incidentreport.address.$valid && incidentreport.address.$touched'>Please insert a valid address.</p>
 
     <aside>
       <label for='city'>City</label>
-      <input required type='text' name='city' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
+      <input class='form-control' required type='text' name='city' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
     </aside>
     <p ng-show='!incidentreport.city.$valid && incidentreport.city.$touched'>Please insert a valid city.</p>
 
     <aside>
       <label for='state'>State</label>
-      <input required type='text' name='state' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
+      <input class='form-control' required type='text' name='state' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
     </aside>
     <p ng-show='!incidentreport.state.$valid && incidentreport.state.$touched'>Please insert a valid state.</p>
 
     <aside>
       <label for='zipcode'>Zip Code</label>
-      <input required type='text' name='zipcode' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
+      <input class='form-control' required type='text' name='zipcode' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
     </aside>
     <p ng-show='!incidentreport.zipcode.$valid && incidentreport.zipcode.$touched'>Please insert a valid zip code.</p>
   </fieldset>
