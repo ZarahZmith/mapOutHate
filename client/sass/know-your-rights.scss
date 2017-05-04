@@ -1,5 +1,6 @@
 .headerkyr {
   text-align: center;
+  font-size: 30pt;
 }
 
 .kyr {
@@ -8,6 +9,10 @@
   color: #000000;
   section {
     margin: 1em;
+    h3 {
+      text-align: center;
+      margin: 0;
+    }
   }
 }
 
