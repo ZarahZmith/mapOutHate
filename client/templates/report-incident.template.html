@@ -60,36 +60,36 @@
   </aside>
   <p ng-show='!incidentreport.content.$valid && incidentreport.content.$touched'>Please describe the incident.</p>
 
-  <fieldset>
-    <legend>Location</legend>
+  <fieldset class='location'>
+    <h3>Location:</h3>
 
     <aside>
-      <label for='address'>Address</label>
+      <label class='location-det' for='address'>Address</label>
       <input class='form-control' required type='text' name='address' id='address' placeholder='1600 Pennsylvania Ave NW' ng-model='reportCtrl.content.address'>
     </aside>
     <p ng-show='!incidentreport.address.$valid && incidentreport.address.$touched'>Please insert a valid address.</p>
 
     <aside>
-      <label for='city'>City</label>
+      <label class='location-det' for='city'>City</label>
       <input class='form-control' required type='text' name='city' id='city' placeholder='Washington' ng-model='reportCtrl.content.city'>
     </aside>
     <p ng-show='!incidentreport.city.$valid && incidentreport.city.$touched'>Please insert a valid city.</p>
 
     <aside>
-      <label for='state'>State</label>
+      <label class='location-det' for='state'>State</label>
       <input class='form-control' required type='text' name='state' id='state' placeholder='DC' ng-model='reportCtrl.content.state'>
     </aside>
     <p ng-show='!incidentreport.state.$valid && incidentreport.state.$touched'>Please insert a valid state.</p>
 
     <aside>
-      <label for='zipcode'>Zip Code</label>
+      <label class='location-det' for='zipcode'>Zip Code</label>
       <input class='form-control' required type='text' name='zipcode' id='zipcode' placeholder='20500' ng-model='reportCtrl.content.zip'>
     </aside>
     <p ng-show='!incidentreport.zipcode.$valid && incidentreport.zipcode.$touched'>Please insert a valid zip code.</p>
   </fieldset>
 
   <aside class='button'>
-    <input required type='submit' value='Submit My Report' class='btn btn-default'>
+    <input required type='submit' value='Submit My Report' class='btn btn-danger'>
   </aside>
 
 </form>
