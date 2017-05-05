@@ -6,5 +6,7 @@
 </p>
 
 <p ng-hide='reportCtrl.error' class='map-info'>Below are other reports in your area. You can click on an individual pin to view the details.</p>
+
 <p ng-show='reportCtrl.error' class='alert alert-warning'>{{reportCtrl.error}}</p>
+
 <map reports='reportCtrl.reports'><map>
