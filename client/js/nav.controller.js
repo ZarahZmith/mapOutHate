@@ -5,6 +5,7 @@
     .controller('NavController', NavController);
 
   function NavController() {
+    
     let vm = this;
 
     vm.showNav = false;
