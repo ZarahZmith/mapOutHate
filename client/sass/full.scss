@@ -3,6 +3,11 @@ body {
   color: $themeFontColor;
   margin: 0;
 
+  a {
+    color: #c22929;
+    font-weight: bold;
+  }
+
   h1.main {
     font-family: $themeFont;
     font-weight: bold;
