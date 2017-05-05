@@ -13,6 +13,7 @@
    * @return {void}
    */
   function routerConfig($stateProvider, $urlRouterProvider) {
+    
     $urlRouterProvider.when('', '/');
 
     $urlRouterProvider.otherwise('404');
