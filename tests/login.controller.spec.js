@@ -10,6 +10,7 @@
     beforeEach(module('mapOutHate'));
 
     beforeEach(inject(function($controller) {
+
       LoginController = $controller('LoginController');
 
       window.FB = {};
@@ -19,6 +20,7 @@
         fn({ status: 'connected', authResponse: { accessToken: 'sarah' } });
       };
       window.FB.getLoginStatus.numTimesCalled = 0;
+      
     }));
 
     afterEach(function() {

@@ -18,6 +18,7 @@
     }));
 
     beforeEach(inject(function($controller) {
+
       mockReportService.addReport = function addReport(content) {
 
         if (typeof(content) === 'object') {
@@ -64,6 +65,7 @@
       $stateParams = {successMessage: null};
 
       ReportController = $controller('ReportController', {$stateParams: $stateParams});
+      
     }));
 
     it('should have all of the things we expect it to', function() {

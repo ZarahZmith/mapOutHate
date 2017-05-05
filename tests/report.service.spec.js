@@ -11,6 +11,7 @@
     beforeEach(module('mapOutHate'));
 
     beforeEach(inject(function(_$httpBackend_, _ReportService_) {
+
       $httpBackend = _$httpBackend_;
       ReportService = _ReportService_;
 
@@ -41,6 +42,7 @@
             id: '45tyhjwefhy57'
           }
         ]);
+        
     }));
 
     describe('addReport', function() {
