@@ -120,6 +120,7 @@ module.exports = function(config) {
         }
       }
     }
+    
   });
 
   require('load-grunt-tasks')(config);
