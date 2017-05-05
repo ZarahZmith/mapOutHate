@@ -14,6 +14,7 @@
     margin: .5em;
     font-size: 18pt;
   }
+
 }
 
 .bold {
@@ -51,6 +52,7 @@
   border: .5em solid $themeFontColor;
   border-radius: 2%;
 }
+
 .help {
   text-align: center;
   font-size: 30pt;
@@ -59,9 +61,4 @@
 .help-list {
   font-size: 18pt;
   padding: 1em;
-}
-
-a {
-  color: #c22929;
-  font-weight: bold;
 }
