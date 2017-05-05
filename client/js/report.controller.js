@@ -7,6 +7,7 @@
   ReportController.$inject = ['$state', '$stateParams', 'ReportService'];
 
   function ReportController($state, $stateParams, ReportService) {
+    
     let vm = this;
 
     vm.notification = $stateParams.successMessage;
@@ -53,5 +54,7 @@
     if ($state.current.name === 'view-reports') {
       vm.getReports();
     }
+
   }
+
 }());
