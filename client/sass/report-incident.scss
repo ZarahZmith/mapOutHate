@@ -18,6 +18,7 @@
     box-shadow: 1px 3px 1px #242323;
     font-size: 15pt;
     font-weight: bold;
+    
     .type {
       font-size: 12pt;
       font-weight: normal;
@@ -33,11 +34,13 @@
     box-shadow: 1px 3px 1px #242323;
     margin: 3em .3em;
     padding: 2.5em;
+
     label.content {
       padding: .3em;
       font-style: normal;
       font-size: 15pt;
     }
+
     textarea#reportcontent {
       height: 200px;
       margin: .3em;
@@ -52,15 +55,18 @@
     box-shadow: 1px 3px 1px #242323;
     padding: 3em;
     margin: 2em .3em;
+
     .form-control {
       padding: .3em;
     }
+
     h3 {
       font-size: 15pt;
       font-weight: bold;
       margin: 0;
       padding: .3em;
     }
+
     .location-det {
       font-weight: normal;
       font-size: 12pt;
@@ -71,6 +77,7 @@
     text-align: center;
     padding: 0 0 10em 0;
     border-bottom: .2em solid #242323;
+
     .btn {
       width: 60%;
       margin: 0 auto;
@@ -89,6 +96,7 @@
       width: 70%;
       margin: 1em auto;
       padding: 4em;
+
       .type {
         font-size: 15pt;
       }
@@ -98,11 +106,13 @@
       width: 70%;
       margin: 3em auto;
       padding: 3.5em;
+
       label.content {
         text-align: left;
         padding: .5em 1em;
         font-size: 15pt;
       }
+
       textarea#reportcontent {
         width: 100%;
         margin: 0 auto 1em auto;
@@ -114,31 +124,38 @@
       width: 70%;
       margin: 3em auto;
       padding: 4em;
+
       h3 {
         padding: .5em .5em;
         font-size: 15pt;
       }
+
       aside {
         padding: .5em;
       }
+
       .location-det {
         font-size: 15pt;
       }
+
       .form-control {
         font-size: 15pt;
       }
     }
+
   }
 
   @media screen and (min-width: 70em) {
     .title {
       font-size: 40pt;
     }
+
     .discrimination-type {
       width: 80%;
       font-size: 25pt;
       padding: 2.5em;
       text-align: center;
+
       .type {
         font-size: 25pt;
         text-align: left;
@@ -179,4 +196,5 @@
       }
     }
   }
+
 }

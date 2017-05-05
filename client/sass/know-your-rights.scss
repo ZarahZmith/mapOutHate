@@ -13,17 +13,21 @@
   border-bottom: 1px solid #241d1c;
   padding-bottom: 6em;
   text-align: center;
+
   section {
     margin: 1em;
+
     h3 {
       text-align: center;
       margin: 0;
       font-size: 22pt;
     }
+
     p {
       padding: 1em 2em;
     }
   }
+  
 }
 
 @media screen and (min-width: 35em) {
