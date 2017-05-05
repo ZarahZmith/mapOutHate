@@ -15,6 +15,11 @@
       }
     };
 
+    /**
+     * Establishes map via Google API
+     * @param  {Object} scope The window of the page
+     * @return {void}
+     */
     function setupMap(scope) {
       let reportMap = new google.maps.Map(document.querySelector('#map'),
         { center: {lat: 38.9072, lng: -77.0369}, zoom: 8 });
@@ -46,7 +51,6 @@
         });
       });
     }
-
 
   }
 }());
