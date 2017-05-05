@@ -4,6 +4,10 @@
   angular.module('mapOutHate')
     .directive('map', map);
 
+  /**
+   * Creates map
+   * @return {Object}            The map directive
+   */
   function map(dateFilter) {
 
     return {
