@@ -13,7 +13,7 @@ The purpose of this project is to create a data set for micro-aggressions and di
 8. Run 'grunt build' from the root to build the client file.
 
 # Tools Used for Creation
-This application utilizes Facebook's third party authentication to log in. Google's Map API for the map that allows users to visualize incidents. AnjularJS was used on the front end with sass and Bootstrap for styling. The backend uses NodeJS. Testing was done with Karma, Mocha, and Chai. The build process runts through Grunt. Heroku automatically deploys the site through the master branch on GitHub.
+This application utilizes Facebook's third party authentication to log in. Google's Map API for the map that allows users to visualize incidents. AnjularJS was used on the front end with sass and Bootstrap for styling. The backend uses NodeJS. Testing was done with Karma, Mocha, and Chai. The build process runs through Grunt. Heroku automatically deploys the site through the master branch on GitHub.
 
 # Created by Sarah Graves Smith
 [Email](smith.g.sarah030@gmail.com)
